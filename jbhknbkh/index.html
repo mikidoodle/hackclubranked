@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><script>
+window.__RANKED_PREVIEW__ = false;
+function __rankedNormalizePage(page) {
+  return String(page).split("#")[0].split("?")[0].replace(/^\.\//, "").replace(/^\/+/, "");
+}
+window.goTo = function goTo(page) {
+  if (window.__RANKED_PREVIEW__) {
+    window.parent.postMessage({ source: "ranked-preview", type: "navigate", page: __rankedNormalizePage(page) }, "*");
+  } else {
+    window.location.href = page;
+  }
+};</script><meta charset="utf-8"><meta name="viewport" content="width=device-width"><script src="https://cdn.tailwindcss.com"></script><style>body { margin: 0; font-family: ui-monospace, Menlo, monospace; background: #f8eeff; color: #20201f; }
+main { min-height: 100vh; display: grid; place-items: center; }
+.blob { background: #fff3b8; border: 3px solid #20201f; padding: 48px 64px;
+  border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%; box-shadow: 6px 6px 0 #20201f; transform: rotate(-2deg); }
+h1 { font-size: 32px; margin: 0; }</style></head>
+  <body>
+    <!-- to add another page, use a link: <a href="about.html">about</a>
+         or a button: <button onclick="goTo('about.html')">about</button> -->
+    <!-- Tailwind is enabled! e.g. class="flex items-center gap-4" -->
+    <main><div class="blob"><h1>get started!</h1></div></main>
+  
+
+
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width">
+  
+    <!-- to add another page, use a link: <a href="about.html">about</a>
+         or a button: <button onclick="goTo('about.html')">about</button> -->
+    <!-- Tailwind is enabled! e.g. class="flex items-center gap-4" -->
+    <main><div class="blob"><h1>get started!</h1></div></main>
+  
+<script>document.querySelector('.blob')?.addEventListener('click', () => {
+  document.body.classList.toggle('clicked');
+});</script></body></html>

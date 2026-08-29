@@ -1,0 +1,5 @@
+body { margin: 0; font-family: ui-monospace, Menlo, monospace; background: #f8eeff; color: #20201f; }
+main { min-height: 100vh; display: grid; place-items: center; }
+.blob { background: #fff3b8; border: 3px solid #20201f; padding: 48px 64px;
+  border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%; box-shadow: 6px 6px 0 #20201f; transform: rotate(-2deg); }
+h1 { font-size: 32px; margin: 0; }
